@@ -4,6 +4,7 @@ import Arrow from "../assets/images/arrow.svg?react";
 import CallIcon from "../assets/images/call.svg?react"
 const Navbar = () => {
   return (
+    // koi fazool comment add krod
     <>
       <div className='max-w-navcontainer mt-4 w-95width mx-auto bg-primary py-3.75 px-7.5 rounded-[50px]'>
         <div className=' grid grid-cols-[auto_2fr_auto_auto] gap-6'>
@@ -18,10 +19,10 @@ const Navbar = () => {
               <li>COntact Us</li>
             </ul>
           </div>
-            <div className='flex items-center gap-4 px-4'>
-              <div><CallIcon className="w-6 h-6" /></div>
-              <div className='text-[20px] text-white font-bold'><p>+91 7710-290176</p></div>
-            </div>
+          <div className='flex items-center gap-4 px-4'>
+            <div><CallIcon className="w-6 h-6" /></div>
+            <div className='text-[20px] text-white font-bold'><p>+91 7710-290176</p></div>
+          </div>
           <div>
             <button className="text-primary text-base px-8 py-2.5 rounded-4xl flex items-center gap-2 bg-white">
               Donate Now
