@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #D44E76;
+    --max-width-navcontainer: 1395px;
+    --width-95width: 95%;
+    --color-bg: #F0F0F0;
+}
