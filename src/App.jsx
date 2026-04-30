@@ -9,6 +9,8 @@ const App = () => {
       </div>
       <Navbar />
       <DonationCards />
+      <h1>Hello world</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab reprehenderit nesciunt non enim debitis ipsa, laborum pariatur. Illo unde veritatis nesciunt, blanditiis iusto eligendi ex sit! Quidem velit animi iste delectus dolore?</p>
     </>
   )
 }
