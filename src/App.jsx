@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       <div className='bg-bg'>
-
+        this is something new???
       </div>
       <Navbar />
       <DonationCards />
