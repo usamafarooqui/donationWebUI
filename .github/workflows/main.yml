@@ -1,0 +1,14 @@
+name: First Workflow  #ye workflow ka name hai ye kuch bhi ho sakta 
+
+on:  # ye event hai 
+  push:  # yahan bta rahay hn push event pe ye trigger hoga
+    branches: [main] # kis branch k push pe trigger hoga wo bta rahay hn
+
+jobs: # kaam kia krna hai ye hum jobs mein btaingay
+  demo: # ye job ka naam hai kuch bhi rakh saktay han
+    runs-on: ubuntu lastes # ye runner hai k kahan ye run hoga apmi hosted machine bhi ho sakti abhi git ki machine use kr rahay
+
+    steps:  # yahan hum btaingay kia kia steps krnay hn
+      - name: Greetings # ye step ka naam hai kuch bhi ho sakta
+        run: echo "Hello from Github workflow" # yahan kaam define krengay
+  
