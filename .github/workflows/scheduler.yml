@@ -1,0 +1,14 @@
+name: Schedule job # workflow name 
+
+on: # event 
+  schedule: # schedule 
+    - cron: "0 0 * * *" # cron minute hour date month week cron a time based job use for automation (like a alarm) cron full form command run on 
+
+jobs:
+  run-scripts:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Print Message
+        run: echo "Schedule Workflow executed"
