@@ -1,0 +1,38 @@
+# Workflow ka naam
+name: Build My React App
+
+# Workflow push event par trigger hoga
+on:
+  push:
+    # Sirf main branch par push hone par run hoga
+    branches: [main]
+
+jobs:
+  # Job ID (unique identifier)
+  build-react-app:
+
+    # GitHub ki Ubuntu virtual machine use hogi
+    runs-on: ubuntu-latest
+
+    steps:
+      # Repository ka code runner machine par download karega
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Runner machine par Node.js install karega
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Node.js version
+          node-version: 22
+
+          # npm cache use karega taake workflow fast ho
+          cache: npm
+
+      # Project ki dependencies install karega
+      - name: Install Dependencies
+        run: npm install
+
+      # React application build karega
+      - name: Build React App
+        run: npm run build
