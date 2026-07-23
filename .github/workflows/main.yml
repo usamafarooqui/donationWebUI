@@ -6,7 +6,7 @@ on:  # ye event hai
 
 jobs: # kaam kia krna hai ye hum jobs mein btaingay
   demo: # ye job ka naam hai kuch bhi rakh saktay han
-    runs-on: ubuntu lastes # ye runner hai k kahan ye run hoga apmi hosted machine bhi ho sakti abhi git ki machine use kr rahay
+    runs-on: ubuntu-latest # ye runner hai k kahan ye run hoga apmi hosted machine bhi ho sakti abhi git ki machine use kr rahay
 
     steps:  # yahan hum btaingay kia kia steps krnay hn
       - name: Greetings # ye step ka naam hai kuch bhi ho sakta
