@@ -1,0 +1,33 @@
+name: Next js build with caching & Artifacts
+
+on: 
+  push:
+    branches: [main]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4.2.2
+
+      - name: setup node js
+        uses: actions/setup-node@v4.2.0
+        with:
+          node-version: 22.x
+          cache: 'npm'
+
+      - name: install dependencies
+        run: npm install
+
+      - name: Build React js app 
+        run: npm run build
+
+      - name: Upload build Artifacts
+        uses: actions/upload-artifacts@v4.6.0
+        with:
+          name: React js build 
+          path: out/
+
+      
