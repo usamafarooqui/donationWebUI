@@ -1,0 +1,24 @@
+name: Deploy react js app
+
+on: 
+  push: 
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    concurrency: 
+      group: deploy
+      cancel-in-progress: true
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6.1.0
+      - name: install dependencies
+        run: npm install
+      - name: build react app
+        run: npm run build
+      - name: deploy
+        run: echo "deploying app"
