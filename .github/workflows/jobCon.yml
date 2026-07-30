@@ -1,24 +1,41 @@
-name: Deploy react js app
+# Workflow Name (This will appear in the GitHub Actions tab)
+name: Deploy React JS App
 
-on: 
-  push: 
+# Trigger the workflow whenever code is pushed to the main branch
+on:
+  push:
     branches: [main]
 
 jobs:
+  # Job name
   build:
+    # Runner (Virtual Machine) on which the workflow will execute
     runs-on: ubuntu-latest
 
-    concurrency: 
+    # Concurrency ensures only one deployment runs at a time.
+    # If another push happens while this workflow is running,
+    # the current run will be cancelled and the latest one will start.
+    concurrency:
       group: deploy
       cancel-in-progress: true
 
-
     steps:
+      # Step 1: Download the repository code to the runner
       - name: Checkout Repository
         uses: actions/checkout@v6.1.0
-      - name: install dependencies
+
+      # Step 2: Install all project dependencies from package.json
+      - name: Install Dependencies
         run: npm install
-      - name: build react app
+
+      # Step 3: Build the React application
+      # This creates the production-ready build (usually inside the dist/ or build/ folder)
+      - name: Build React App
         run: npm run build
-      - name: deploy
-        run: echo "deploying app"
+
+      # Step 4: Deploy the application
+      # Currently this only prints a message.
+      # Later, replace this command with your actual deployment commands
+      # (e.g., Vercel, Netlify, AWS S3, Firebase, VPS, etc.)
+      - name: Deploy Application
+        run: echo "Deploying React App..."
